@@ -1,0 +1,325 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.logo {
+  background-color: #499a17; 
+  color: black; 
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+}
+
+.letra {
+  font-size: 40px;
+  background-color: black;
+  color: #499a17;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.logo-text {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.slogan {
+  font-size: 11px;
+  margin-top: 5px;
+}
+
+.navbar {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 15px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #499a17;
+  font-weight: bold;
+  font-size: 14px;
+  transition: 0.3s;
+  background-color: #000;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.navbar a:hover {
+  color: white;
+  background-color: #499a17;
+}
+
+main {
+  background-image: url("../image/land2.jpeg");
+  background-size: cover;      
+  background-repeat: no-repeat; 
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+main h3 {
+  background-color: #c2c2c2;
+  color: #00000028;
+  padding: 10px 20px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Estilização do chat */
+.chat-container {
+  width: 100%;
+  max-width: 400px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Área de mensagens */
+.chat-messages {
+  height: 250px;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+/* Input e botão */
+.chat-input-container {
+  display: flex;
+  gap: 10px;
+}
+
+#user-input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+#send-button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#send-button:hover {
+  background: #0056b3;
+}
+
+/* Textos */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.texto, .texto2 {
+  flex: 1 1 400px;
+  background: rgba(0,0,0,0.5);
+  padding: 20px;
+  color: #ccc;
+  border-radius: 10px;
+  max-width: 500px;
+}
+
+.texto h1, .texto2 h2 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  background: #c2c2c2;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer .imagens {
+  display: flex;
+  gap: 20px;
+  width: 50px;
+}
+
+.footer-img img {
+  width: 50px;
+  transition: transform 0.3s ease;
+}
+
+.footer-img img:hover {
+  transform: scale(1.1);
+}
+
+/* RESPONSIVO de verdade */
+@media (max-width: 768px) {
+  .logo {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 10px;
+  }
+
+  .logo-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+    order: 2; /* Aparece no meio */
+  }
+  .slogan{
+    margin-top: 30px;
+  }
+  .navbar {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .navbar ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .navbar li:first-child { /* Home */
+    order: 1;
+    margin-left: 30px;
+    margin-top: -50px;
+  }
+
+  .navbar li:last-child { /* Fale Conosco */
+    order: 3;
+    margin-right: -25px;
+    margin-top: -50px;
+  }
+
+  .navbar a {
+    font-size: 14px;
+    padding: 8px 12px;
+    width: 100%;
+    text-align: center;
+  }
+
+  main h3 {
+    font-size: 18px;
+    margin: 1rem auto;
+    text-align: center;
+  }
+
+  .chat-container {
+    width: 90%;
+    margin: 1rem auto;
+  }
+
+  .chat-input-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #user-input, #send-button {
+    width: 100%;
+  }
+
+  .texto, .texto2 {
+    max-width: 90%;
+    margin: 10px auto;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    height: auto;
+  }
+
+  .imagem {
+    width: 80%;
+    max-width: 100px;
+    justify-content: center;
+  }
+
+  a img {
+    width: 80px;
+  }
+}
+
+
+/* @media (max-width: 768px) {
+  .logo-container {
+    flex-direction: column;
+  }
+  .chat-input-container {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  #user-input, #send-button {
+    width: 100%;
+  }
+  
+  .navbar ul {
+    display: flex;
+    gap: 10px;
+    background-color: #000;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+  }
+
+  main h3 {
+    font-size: 18px;
+  }
+
+  .chat-container {
+    max-width: 100%;
+  }
+
+  .texto, .texto2 {
+    max-width: 90%;
+  }
+} */
