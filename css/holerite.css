@@ -1,0 +1,294 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+  .logo {
+    background-color:  #1A8F4F; 
+    color: black; 
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+  }
+  .letra img{
+    width: 60px;
+    margin-top: 4px;
+    border-radius: 30px;
+    background-image: #000;
+  }
+  .letra {
+    font-size: 40px;
+    color:#1A8F4F;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .logo-text {
+    font-size: 48px;
+    font-weight: bold;
+  }
+  
+  .slogan {
+    font-size: 11px;
+    margin-top: 5px;
+  }
+  
+  .navbar {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+  }
+  
+  .navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: #1A8F4F;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.3s;
+    background-color: #000;
+    border-radius: 5px;
+    padding: 5px 10px;
+  }
+  
+  .navbar a:hover {
+    color: white;
+    background-color: #1A8F4F;
+  }
+
+
+
+ .contra{
+    width: 450px;
+    background-color: #000;
+    color: #ccc;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+}
+
+.contra h2{
+    font-size: 30px;
+    padding: 8px 10px;
+}
+  /* Contra-cheque */
+  .contracheque {
+    background: #fff;
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    border: 1px solid #ccc;
+  }
+
+  h2, h3 {
+    text-align: center;
+    margin-bottom: 5px;
+  }
+
+  .dados-gerais, .valores, .resumo, .assinatura {
+    margin-top: 20px;
+  }
+
+  .dados-gerais p, .resumo p {
+    margin: 5px 0;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+
+  th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+  }
+
+  th {
+    background: #eee;
+  }
+
+  .total {
+    font-weight: bold;
+  }
+
+  /* Footer */
+
+  footer {
+    width: 100%;
+    background: #1A8f4f;
+    height: auto; /* Ajustar a altura automaticamente */
+    display: flex;
+    justify-content: space-around; /* Espaçar os elementos filhos */
+    align-items: center; /* Alinhar verticalmente ao centro */
+    padding: 15px 20px; /* Adicionar um pouco de padding */
+  }
+  
+  footer .imagens {
+    display: flex; /* Já está correto para alinhar os filhos (imagem, texto, ícones) */
+    align-items: center; /* Alinhar verticalmente ao centro */
+    gap: 20px; /* Adicionar espaço entre os grupos (imagem/texto e ícones) */
+  }
+  
+  .imagem {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Alinhar imagem e texto verticalmente */
+    gap: 10px; /* Adicionar espaço entre a imagem e o texto */
+  }
+  
+  .imagem img {
+    max-width: 50px;
+    border-radius: 30px;
+  }
+  
+  .imagem p {
+    color: #fff;
+    margin: 0; /* Remover margens desnecessárias */
+  }
+  
+  /* Estilizando os ícones */
+  .d-flex a i {
+    color: #fff; /* Definir a cor branca para os ícones */
+    font-size: 1.5em; /* Ajustar o tamanho dos ícones se necessário */
+  }
+  
+  /* Remover o estilo inline desnecessário no HTML (opcional, mas limpa o código) */
+  .d-flex {
+    display: flex; /* Já está no HTML, pode remover daqui se preferir */
+    gap: 20px; /* Ajustar o espaçamento entre os ícones */
+    justify-content: flex-end; /* Alinhar os ícones à direita dentro do grupo deles */
+    margin-left: 20px;
+  }
+
+  /* Responsividade */
+
+
+  @media (max-width: 768px) {
+    .logo {
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+      padding: 10px;
+      position: relative;
+    }
+  
+    .logo-container {
+      flex-direction: row;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+  
+    .slogan {
+      margin-bottom: 20px;
+    }
+  
+    .navbar {
+      position: static; /* Remove posição absoluta */
+      width: 100%;
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+    }
+  
+    .navbar ul {
+      display: flex;
+      flex-direction: row; /* Deixa os itens em linha */
+      flex-wrap: wrap; /* Quebra se precisar */
+      justify-content: center;
+      gap: 10px;
+      padding: 0;
+    }
+  
+    .navbar li {
+      margin: 5px 0;
+    }
+  
+    .navbar a {
+      font-size: 14px;
+      padding: 6px 10px;
+      display: block;
+      background-color: #000;
+      color: #1A8f4f;
+      border-radius: 5px;
+      text-align: center;
+      text-decoration: none;
+    }
+  
+    .navbar a:hover {
+      background-color: #1A8f4f;
+      color: white;
+    }
+    .letra img{
+      width: 30px;
+      margin-left: -30px;
+    }
+
+    .logo-text{
+      font-size: 20px;
+      text-align: center;
+      justify-content: center;
+    }
+    .contra {
+      width: 90%;
+      font-size: 20px;
+      text-align: center;
+    }
+  
+    .contra h2 {
+      font-size: 24px;
+      padding: 10px;
+    }
+  
+    .contracheque {
+      padding: 10px;
+      width: 95%;
+    }
+  
+    .dados-gerais p,
+    .resumo p {
+      font-size: 14px;
+    }
+  
+    table {
+      font-size: 12px;
+    }
+  
+    th, td {
+      padding: 6px;
+    }
+  
+    .resumo, .assinatura {
+      font-size: 14px;
+    }
+  
+    .assinatura {
+      text-align: center;
+    }
+  }
+  

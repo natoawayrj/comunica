@@ -7,9 +7,14 @@
 body {
   font-family: 'Montserrat', sans-serif;
 }
-
+.letra img{
+  width: 60px;
+  margin-top: 4px;
+  border-radius: 30px;
+  background-image: #000;
+}
 .logo {
-  background-color: #499a17; 
+  background-color: #1A8f4f; 
   color: black; 
   text-align: center;
   padding: 20px;
@@ -17,6 +22,7 @@ body {
   flex-direction: column;
   align-items: center;
   position: relative;
+  
 }
 
 .logo-container {
@@ -25,10 +31,13 @@ body {
   gap: 10px; 
 }
 
+.quem{
+  font-size: 40px;
+  color: #1A8f4f;
+  font-weight: bold;
+}
 .letra {
   font-size: 40px;
-  background-color: black;
-  color: #499a17;
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -61,7 +70,7 @@ body {
 
 .navbar a {
   text-decoration: none;
-  color: #499a17;
+  color: #1A8f4f;
   font-weight: bold;
   font-size: 14px;
   transition: 0.3s;
@@ -72,11 +81,10 @@ body {
 
 .navbar a:hover {
   color: white;
-  background-color: #499a17;
+  background-color: #1A8f4f;
 }
 
 main {
-  background-image: url("../image/land2.jpeg");
   background-size: cover;      
   background-repeat: no-repeat; 
   background-position: center;
@@ -88,13 +96,14 @@ main {
 }
 
 main h3 {
-  background-color: #c2c2c2;
-  color: #00000028;
+  background-color: #000;
+  color: #ccc;
   padding: 10px 20px;
   border: 1px solid #000;
-  border-radius: 5px;
+  border-radius: 30px;
   margin-bottom: 20px;
   text-align: center;
+  font-size: 30px;
 }
 
 /* Estilização do chat */
@@ -121,6 +130,7 @@ main h3 {
 .chat-input-container {
   display: flex;
   gap: 10px;
+  margin-top: 40px;
 }
 
 #user-input {
@@ -132,7 +142,7 @@ main h3 {
 }
 
 #send-button {
-  background: #007bff;
+  background: #08386e;
   color: white;
   border: none;
   padding: 8px 12px;
@@ -147,136 +157,156 @@ main h3 {
 
 /* Textos */
 .container {
-  display: flex;
-  flex-wrap: wrap;
   gap: 30px;
   justify-content: center;
   margin-top: 30px;
 }
-
-.texto, .texto2 {
-  flex: 1 1 400px;
+.container h1{
+text-align: center;
+font-size: 50px;
+margin-bottom: 40px;
+justify-content: center;
+}
+.texto {
   background: rgba(0,0,0,0.5);
   padding: 20px;
   color: #ccc;
   border-radius: 10px;
-  max-width: 500px;
+  width: 100%;
+  font-weight: 35px;
 }
-
-.texto h1, .texto2 h2 {
-  font-size: 24px;
-  text-align: center;
-  margin-bottom: 15px;
+.texto p{
+  color: white;
 }
 
 /* Footer */
+
 footer {
   width: 100%;
-  background: #c2c2c2;
-  height: 120px;
+  background: #1A8f4f;
+  height: auto; /* Ajustar a altura automaticamente */
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-around; /* Espaçar os elementos filhos */
+  align-items: center; /* Alinhar verticalmente ao centro */
+  padding: 15px 20px; /* Adicionar um pouco de padding */
 }
 
-.footer .imagens {
+footer .imagens {
+  display: flex; /* Já está correto para alinhar os filhos (imagem, texto, ícones) */
+  align-items: center; /* Alinhar verticalmente ao centro */
+  gap: 20px; /* Adicionar espaço entre os grupos (imagem/texto e ícones) */
+}
+
+.imagem {
   display: flex;
-  gap: 20px;
-  width: 50px;
+  flex-direction: row;
+  align-items: center; /* Alinhar imagem e texto verticalmente */
+  gap: 10px; /* Adicionar espaço entre a imagem e o texto */
 }
 
-.footer-img img {
-  width: 50px;
-  transition: transform 0.3s ease;
+.imagem img {
+  max-width: 50px;
+  border-radius: 30px;
 }
 
-.footer-img img:hover {
-  transform: scale(1.1);
+.imagem p {
+  color: #fff;
+  margin: 0; /* Remover margens desnecessárias */
 }
 
-/* RESPONSIVO de verdade */
+/* Estilizando os ícones */
+.d-flex a i {
+  color: #fff; /* Definir a cor branca para os ícones */
+  font-size: 1.5em; /* Ajustar o tamanho dos ícones se necessário */
+}
+
+/* Remover o estilo inline desnecessário no HTML (opcional, mas limpa o código) */
+.d-flex {
+  display: flex; /* Já está no HTML, pode remover daqui se preferir */
+  gap: 20px; /* Ajustar o espaçamento entre os ícones */
+  justify-content: flex-end; /* Alinhar os ícones à direita dentro do grupo deles */
+  margin-left: 20px;
+}
+table {
+  width: 300px;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  width: 40px;
+  height: 40px;
+}
+th {
+  background: #499a17;
+  color: white;
+}
+.today {
+  background: #007bff;
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+}
+
+/* RESPONSIVO */
 @media (max-width: 768px) {
   .logo {
     flex-direction: column;
     align-items: center;
     height: auto;
     padding: 10px;
+    position: relative;
   }
 
   .logo-container {
     flex-direction: row;
-    align-items: center;
     justify-content: center;
-    margin: 10px 0;
-    order: 2; /* Aparece no meio */
+    margin-bottom: 10px;
   }
-  .slogan{
-    margin-top: 30px;
+
+  .slogan {
+    margin-bottom: 10px;
   }
+
   .navbar {
+    position: static; /* Remove posição absoluta */
     width: 100%;
     margin-top: 10px;
+    display: flex;
+    justify-content: center;
   }
 
   .navbar ul {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    border-radius: 10px;
+    flex-direction: row; /* Deixa os itens em linha */
+    flex-wrap: wrap; /* Quebra se precisar */
+    justify-content: center;
+    gap: 10px;
+    padding: 0;
+    font-size: 15px;
   }
 
-  .navbar li:first-child { /* Home */
-    order: 1;
-    margin-left: 30px;
-    margin-top: -50px;
-  }
-
-  .navbar li:last-child { /* Fale Conosco */
-    order: 3;
-    margin-right: -25px;
-    margin-top: -50px;
+  .navbar li {
+    margin: 5px 0;
+    font-size: 15px;
   }
 
   .navbar a {
     font-size: 14px;
-    padding: 8px 12px;
-    width: 100%;
+    padding: 6px 10px;
+    display: block;
+    background-color: #000;
+    color: #1A8f4f;
+    border-radius: 5px;
     text-align: center;
+    text-decoration: none;
   }
 
-  main h3 {
-    font-size: 18px;
-    margin: 1rem auto;
-    text-align: center;
+  .navbar a:hover {
+    background-color: #1A8f4f;
+    color: white;
   }
-
-  .chat-container {
-    width: 90%;
-    margin: 1rem auto;
-  }
-
-  .chat-input-container {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  #user-input, #send-button {
-    width: 100%;
-  }
-
-  .texto, .texto2 {
-    max-width: 90%;
-    margin: 10px auto;
-  }
-
-  footer {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    height: auto;
-  }
-
   .imagem {
     width: 80%;
     max-width: 100px;
@@ -286,40 +316,19 @@ footer {
   a img {
     width: 80px;
   }
+  .letra img{
+    width: 30px;
+    margin-left: -30px;
+  }
+
+  .logo-text{
+    font-size: 20px;
+    text-align: center;
+    justify-content: center;
+  }
+  .slogan{
+    font-weight: bold;
+    margin-top: -30px;
+  }
 }
 
-
-/* @media (max-width: 768px) {
-  .logo-container {
-    flex-direction: column;
-  }
-  .chat-input-container {
-    flex-direction: column;
-    gap: 8px;
-  }
-  
-  #user-input, #send-button {
-    width: 100%;
-  }
-  
-  .navbar ul {
-    display: flex;
-    gap: 10px;
-    background-color: #000;
-    border-radius: 10px;
-    padding: 10px;
-    margin-top: 10px;
-  }
-
-  main h3 {
-    font-size: 18px;
-  }
-
-  .chat-container {
-    max-width: 100%;
-  }
-
-  .texto, .texto2 {
-    max-width: 90%;
-  }
-} */

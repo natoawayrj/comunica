@@ -4,12 +4,128 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/index.css">
+     <!-- font awesome -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+     <!-- Styles -->
+     <link rel="stylesheet" href="/css/holerite.css">
+     <!-- google fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Sevillana&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Contra-cheque</h1>
-    <button class="btn">
-        <a href="index.html">Voltar</a>
-    </button>
+    <div class="logo">
+        <div class="logo-container">
+            <p class="letra">
+                <img src="./image/logo2.jpeg" alt="logo2" class="logo2">
+            </p>
+            <p class="logo-text">Comunica Fácil</p>
+        </div>
+        <p class="slogan">SERVIÇOS . ENGENHARIA</p>
+        <nav class="navbar">
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li><a href="fale.html">Fale Conosco</a></li>
+                <li><a href="previ.html">Previsão</a></li>
+                <li><a href="contra.html">Holerite</a></li>
+            </ul>
+        </nav>    
+    </div>
+
+    <div class="contra">
+        <h2>Modelo do contra-cheque</h2>
+    </div>
+    <div class="contracheque">
+        <h2>Demonstrativo de Pagamento</h2>
+        <h3>Nome da empresa</h3>
+        <p style="text-align:center;">CNPJ: xx.xxx.xxx/xxxx-xx</p>
+        <p style="text-align:center;">Período: xx/xx/xxxx à xx/xx/xxxx</p>
+    
+        <div class="dados-gerais">
+          <p><strong>Nome:</strong> Nome do Colaborador</p>
+          <p><strong>CPF:</strong> xxx.xxx.xxx-xx</p>
+          <p><strong>Cargo:</strong> </p>
+        </div>
+    
+        <div class="valores">
+          <table>
+            <thead>
+              <tr>
+                <th>Cód.</th>
+                <th>Descrição</th>
+                <th>Referência</th>
+                <th>Vencimentos</th>
+                <th>Descontos</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>001</td>
+                <td>Salário Base</td>
+                <td>0,00</td>
+                <td>R$ 0,00</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>604</td>
+                <td>Vale Transporte</td>
+                <td></td>
+                <td></td>
+                <td>R$ 0,00</td>
+              </tr>
+              <tr>
+                <td>903</td>
+                <td>INSS Folha</td>
+                <td></td>
+                <td></td>
+                <td>R$ 0,00</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr class="total">
+                <td colspan="3">Totais</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+    
+        <div class="resumo">
+          <p><strong>Valor Líquido:</strong> R$ 0,00</p>
+          <p><strong>Salário Base:</strong> R$ 0,00</p>
+          <p><strong>Base Cálculo INSS:</strong> R$ 0,00</p>
+          <p><strong>FGTS do mês:</strong> R$ 0,00</p>
+          <p><strong>Base Cálculo IRRF:</strong> R$ 0,00</p>
+        </div>
+    
+        <div class="assinatura">
+          <p><strong>Assinado por:</strong> RH</p>
+          <p><strong>Data:</strong> </p>
+        </div>
+      </div>
+
+      <footer class="imagens">
+        <div class="imagem">
+           <img src="./image/logo2.jpeg" alt=""> 
+           <p>Comunica Fácil &copy; 2025</p>
+           <div class="d-flex gap-3"  style="justify-content: flex-end;">
+            <a href="#" target="_blank" class="text-decoration-none" aria-label="Facebook">
+              <i class="fab fa-facebook-f fa-lg"></i>
+            </a>
+            <a href="#" target="_blank" class="text-decoration-none" aria-label="Twitter">
+              <i class="fab fa-twitter fa-lg"></i>
+            </a>
+            <a href="#" target="_blank" class="text-decoration-none" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in fa-lg"></i>
+            </a>
+            <a href="#" target="_blank" class="text-decoration-none" aria-label="Instagram">
+              <i class="fab fa-instagram fa-lg"></i>
+            </a>
+          </div>
+        </div>
+      </footer>
 </body>
 </html>
